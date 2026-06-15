@@ -4,7 +4,6 @@ import { JsonRpcProvider, Wallet, Contract } from "ethers";
 const RPC_URL = process.env.NEXT_PUBLIC_RPC_URL ?? "http://127.0.0.1:8545";
 const BET_CONTRACT = process.env.NEXT_PUBLIC_KICKOFF_BET ?? "";
 const ORACLE_KEY = process.env.ORACLE_PRIVATE_KEY;
-if (!ORACLE_KEY) throw new Error("ORACLE_PRIVATE_KEY env var is required");
 
 const BET_ABI = [
   "function reportResult(uint64 betId, bool playerWon, bool isDraw) external",
@@ -17,6 +16,9 @@ export async function POST(req: NextRequest) {
 
     if (!BET_CONTRACT) {
       return NextResponse.json({ error: "BET_CONTRACT not set" }, { status: 500 });
+    }
+    if (!ORACLE_KEY) {
+      return NextResponse.json({ error: "ORACLE_PRIVATE_KEY not set" }, { status: 500 });
     }
     if (typeof betId !== "number") {
       return NextResponse.json({ error: "betId required" }, { status: 400 });

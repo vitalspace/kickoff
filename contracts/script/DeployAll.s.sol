@@ -20,7 +20,7 @@ import {KickOffMatchBet}   from "../src/KickOffMatchBet.sol";
 ///           - Match contract is granted MINTER_ROLE on the token (optional)
 contract DeployAll is Script {
     function run() external {
-        uint256 pk = vm.envOr("PRIVATE_KEY", uint256(0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80));
+        uint256 pk = vm.envUint("PRIVATE_KEY");
         address deployer = vm.addr(pk);
         address admin    = vm.envOr("ADMIN_ADDR", deployer);
         uint256 premint  = vm.envOr("PREMINT_AMOUNT", uint256(1_000_000) * 1e18);
@@ -93,7 +93,8 @@ contract DeployAll is Script {
             '  "kickOffMatchBet":  "', vm.toString(matchBet), '"\n',
             "}\n"
         );
-        string memory out = "deployments/anvil.json";
+        string memory network = vm.envOr("NETWORK", string("anvil"));
+        string memory out = string.concat("deployments/", network, ".json");
         vm.writeFile(out, json);
         console2.log("Wrote deployment JSON to", out);
     }

@@ -18,6 +18,7 @@ fs_permissions = [{ access = "read-write", path = "./deployments" }]
 # Local Anvil defaults — `make deploy` / `forge script` will pick these up
 [rpc_endpoints]
 local = "http://127.0.0.1:8545"
+arbitrumSepolia = "https://sepolia-rollup.arbitrum.io/rpc"
 
 [etherscan]
 anvil = { key = "anonymous", url = "http://127.0.0.1:8545" }

@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "title": "KickOff 3D",
+    "description": "A 3D browser soccer game built with Three.js and Rapier physics."
+  },
+  "common": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "loading": "Loading…",
+    "on": "On",
+    "off": "Off",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "userId": "User ID"
+  },
+  "modeSelect": {
+    "title": "KICKOFF 3D",
+    "subtitle": "Choose your match mode to enter the arena",
+    "ai": "PLAY VS AI",
+    "aiDesc": "Challenge the CPU opponent",
+    "online": "PLAY ONLINE",
+    "onlineDesc": "Matchmake with another player",
+    "settings": "SETTINGS"
+  },
+  "language": {
+    "label": "Language",
+    "triggerLabel": "Language: {{language}}",
+    "followSystem": "System",
+    "followSystemWithLanguage": "System ({{language}})",
+    "enUS": "English",
+    "zhCN": "中文"
+  },
+  "errors": {
+    "notFound": {
+      "code": "404",
+      "title": "Page not found",
+      "description": "The page you're looking for doesn't exist or may have been moved.",
+      "backHome": "Back to home"
+    },
+    "generic": {
+      "title": "Something went wrong",
+      "description": "An unexpected error occurred. You can try again or return to the home page.",
+      "tryAgain": "Try again",
+      "backHome": "Back to home"
+    }
+  }
+}

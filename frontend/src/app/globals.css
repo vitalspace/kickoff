@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-primary: #D4AF37;
+  --color-secondary: #2A7350;
+  --color-accent-game: #0F2A1D;
+  --color-surface-game: #0D1F16;
+  --color-text-game: #F3F7F4;
+  --color-text-secondary-game: #C59E30;
+  --color-text-muted-game: #7D9B8C;
+  --color-border-game: rgba(212, 175, 55, 0.3);
+  --color-states-success: #10B981;
+  --color-states-warning: #F59E0B;
+  --color-states-error: #EF4444;
+
+  --font-broadcast: "Barlow Condensed", sans-serif;
+  --font-sans: var(--font-sans);
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-heading: "Barlow Condensed", sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+}
+
+:root {
+  --app-primary: #D4AF37;
+  --app-secondary: #2A7350;
+  --app-accent: #0F2A1D;
+  --app-surface: #0D1F16;
+  --app-text: #F3F7F4;
+  --app-text-secondary: #C59E30;
+  --app-text-muted: #7D9B8C;
+  --app-border: rgba(212, 175, 55, 0.3);
+  --app-success: #10B981;
+  --app-warning: #F59E0B;
+  --app-error: #EF4444;
+
+  --background: #040F08;
+  --foreground: #F3F7F4;
+  --card: #0D1F16;
+  --card-foreground: #F3F7F4;
+  --popover: #0D1F16;
+  --popover-foreground: #F3F7F4;
+  --primary: #D4AF37;
+  --primary-foreground: #040F08;
+  --secondary: #2A7350;
+  --secondary-foreground: #F3F7F4;
+  --muted: #0F2A1D;
+  --muted-foreground: #7D9B8C;
+  --accent: #0F2A1D;
+  --accent-foreground: #F3F7F4;
+  --destructive: #EF4444;
+  --border: rgba(212, 175, 55, 0.3);
+  --input: rgba(212, 175, 55, 0.15);
+  --ring: rgba(212, 175, 55, 0.5);
+  --radius: 0.5rem;
+
+  --sidebar: #0D1F16;
+  --sidebar-foreground: #F3F7F4;
+  --sidebar-primary: #D4AF37;
+  --sidebar-primary-foreground: #040F08;
+  --sidebar-accent: #0F2A1D;
+  --sidebar-accent-foreground: #F3F7F4;
+  --sidebar-border: rgba(212, 175, 55, 0.2);
+  --sidebar-ring: rgba(212, 175, 55, 0.4);
+}
+
+*, *::before, *::after {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+html {
+  min-height: 100svh;
+}
+
+body {
+  min-height: 100svh;
+  background: #040F08;
+  font-family: "Inter", sans-serif;
+  color: #F3F7F4;
+  overflow-x: hidden;
+}
+
+.font-broadcast {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.glass-panel {
+  background: rgba(13, 31, 22, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-panel-gold {
+  background: rgba(13, 31, 22, 0.9);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.08);
+}
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Goal flash */
+@keyframes goalFlash {
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+}
+
+.goal-flash {
+  animation: goalFlash 1.5s ease-in-out forwards;
+}
+
+/* Game canvas fills its container */
+#game-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

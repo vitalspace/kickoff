@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "title": "KickOff 3D",
+    "description": "基于 Three.js 和 Rapier 物理引擎构建的 3D 浏览器足球游戏。"
+  },
+  "common": {
+    "signIn": "登录",
+    "signOut": "退出登录",
+    "loading": "加载中…",
+    "on": "开",
+    "off": "关",
+    "close": "关闭",
+    "save": "保存",
+    "cancel": "取消",
+    "edit": "编辑",
+    "delete": "删除",
+    "userId": "用户 ID"
+  },
+  "modeSelect": {
+    "title": "KICKOFF 3D",
+    "subtitle": "选择比赛模式进入竞技场",
+    "ai": "人机对战",
+    "aiDesc": "挑战电脑对手",
+    "online": "在线对战",
+    "onlineDesc": "与其他玩家匹配对战",
+    "settings": "设置"
+  },
+  "language": {
+    "label": "语言",
+    "triggerLabel": "语言：{{language}}",
+    "followSystem": "跟随系统",
+    "followSystemWithLanguage": "跟随系统（{{language}}）",
+    "enUS": "English",
+    "zhCN": "中文"
+  },
+  "errors": {
+    "notFound": {
+      "code": "404",
+      "title": "页面未找到",
+      "description": "你访问的页面不存在，或已被移动。",
+      "backHome": "返回首页"
+    },
+    "generic": {
+      "title": "出了点问题",
+      "description": "发生了意外错误。你可以重试，或返回首页继续。",
+      "tryAgain": "重试",
+      "backHome": "返回首页"
+    }
+  }
+}

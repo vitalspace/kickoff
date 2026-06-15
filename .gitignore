@@ -1,0 +1,107 @@
+# Dependencies
+**/node_modules/
+**/bower_components/
+**/jspm_packages/
+**/web_modules/
+**/.pnp/
+**/.pnp.js
+**/.pnp.cjs
+**/.pnp.mjs
+
+# Build outputs
+**/dist/
+**/build/
+**/out/
+**/.next/
+**/.nuxt/
+**/.svelte-kit/
+**/.cache/
+**/.parcel-cache/
+**/.webpack/
+**/.rpt2_cache/
+**/.rts2_cache_cjs/
+**/.rts2_cache_es/
+**/.rts2_cache_umd/
+**/.turbo/
+**/.vercel/
+**/coverage/
+**/lib-cov/
+**/.nyc_output/
+
+# Foundry / Solidity (contracts)
+**/broadcast/
+**/deployments/
+**/cache/
+**/typechain/
+**/lib/
+**/typechain-types/
+
+# Environment files (all)
+.env
+.env.*
+**/.env
+**/.env.*
+**/.env.local
+**/.env.*.local
+
+# Logs
+**/logs/
+**/*.log
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+**/bun-debug.log*
+**/lerna-debug.log*
+**/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime / process
+**/pids/
+**/*.pid
+**/*.seed
+**/*.pid.lock
+**/.eslintcache
+**/.stylelintcache
+**/*.tsbuildinfo
+
+# Editors / OS
+**/.idea/
+**/.vscode/
+**/.vscode-test/
+**/.DS_Store
+**/Thumbs.db
+**/*~
+**/.fuse_hidden*
+**/.directory
+**/.Trash-*
+**/.nfs*
+**/.tern-port
+
+# Misc
+**/.npm/
+**/.yarn/cache
+**/.yarn/unplugged
+**/.yarn/build-state.yml
+**/.yarn/install-state.gz
+**/.serverless/
+**/.fusebox/
+**/.dynamodb/
+**/.docusaurus/
+**/.vuepress/dist
+**/.temp
+**/.grunt/
+**/bower_components/
+**/jspm_packages/
+**/*.tgz
+**/.yarn-integrity
+**/package-lock.json
+**/bun.lockb
+
+# Convex generated (do not commit generated code)
+**/convex/_generated/
+**/.convex/
+
+# Docs / specs / agents
+docs/
+specs/
+.agents/
